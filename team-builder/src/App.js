@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Form from "./components/Form";
+import Form from "./components/Member";
 import MemberList from "./components/MemberList";
 
 function App() {
 
-  const [members, setMembers] = useState([
+  const [member, setMember] = useState([
     {
       name: "Rebecca",
       email: "rebeccasmith92@gmail.com",
@@ -23,6 +23,14 @@ function App() {
       role: "The World's Most Haunted Doll"
     }
   ]);
+
+  const newMember = person => {
+    const newPerson = {
+      name: person.name,
+      email: person.email,
+      role: person.role
+    }
+  }
 
 
   return (

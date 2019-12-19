@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Member from "./Form"
+import Form from "./Member"
 
 const MemberList = props => {
-    const [memberList, setMemberList] = useState([]);
+    return (
+        <div>
+            {props.member.map(person => (
+                <p>{person.name}</p>
+                <p>{person.email}</p>
+                <p>{person.role}</p>
+            ))}
+        </div>
+    );
 }
 
 export default MemberList;

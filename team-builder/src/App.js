@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Form from "./components/Member";
-import MemberList from "./components/MemberList";
+import MemberList from "./components/MemberList.js";
 
 function App() {
 
@@ -24,18 +23,20 @@ function App() {
     }
   ]);
 
-  const newMember = person => {
-    const newPerson = {
+  const addNewMember = person => {
+    const newMember = {
       name: person.name,
       email: person.email,
       role: person.role
-    }
+    };
+    setMember([...member, newMember]);
   }
-
 
   return (
     <div className="App">
-
+        <h1>Hello World!</h1>
+        {/* <Form addNewMember={addNewMember} />
+        <Member person={person} /> */}
     </div>
   );
 }
